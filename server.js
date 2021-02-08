@@ -1,9 +1,6 @@
 var express = require("express");
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+var PORT = process.env.PORT || 8000;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
