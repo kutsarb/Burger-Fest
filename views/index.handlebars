@@ -1,0 +1,60 @@
+<div class="container">
+	<div class="row my-5">
+		<div class="col-lg-12 text-center">
+			<h1 class="bgf"> Burger Fest! </h1>
+		</div>
+	</div>
+	<h3 class="text-center">Your Table</h3>
+	<div class="row tableT">
+
+		<div class="col-12 mx-auto text-center">
+			<div class="row">
+
+				{{#each burger_data}}
+				{{#unless this.devoured}}
+
+				<div class="col-4 text-center">
+					<div class="card burg my-3" style="border-radius: 50%;">
+						<h3 class="card-title"><br>Burger #{{this.id}}<br><br> {{this.burger_name}}
+						</h3>
+						<div class="mx-auto text-center">
+							<form class="devour-form">
+								<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+								<button type="submit" class="btn btn-primary">Devour it!</button>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				{{/unless}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12 text-center enter">
+			<form action="/burgers/insertone" method="POST">
+				<input type="text" placeholder="Enter a burger you want to eat." class="form-control" name="burger_name"
+					value="" id="enterText">
+				<button type="submit" class="btn btn-primary" id="newburg">Submit</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+		<h2 class="mx-auto my-4">Eating History</h2>
+		<div class="col-xl-12 mx-auto my-2 devoured">
+
+			<div class="card">
+				{{#each burger_data}}
+				{{#if this.devoured}}
+				<h6> {{this.id}} . {{this.burger_name}}</h6>
+				{{/if}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+
+
+</div>

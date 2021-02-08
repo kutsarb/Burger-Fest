@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(202, 202, 202);
+}
+
+
+.enter{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#enterText {
+  width: 400px;
+  height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 20px;
+}
+
+.button-size {
+  padding-bottom: 20px;
+}
+
+#newburg {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  color:olive;
+}
+
+
+.card{
+height: 14rem;
+width: 14rem;
+background-color: darkolivegreen;
+}
+
+.card>button{
+  margin-top: 3rem;
+}
+
+.devoured{
+  column-count: 4;
+  column-width: 10rem;
+  column-fill: balance;
+}
+
+img{
+  width: 5rem;
+  height:auto;
+}
+.bgf{
+  font-size: 60px;
+}
+
+.tableT{
+  background-image: url("../images/table.jpg");
+}
+
+.burg{
+  background-image: url("../images/bun.png");
+  background-size: cover;
+  
+}
