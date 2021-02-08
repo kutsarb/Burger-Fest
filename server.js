@@ -1,6 +1,6 @@
 var express = require("express");
 
-app.listen(process.env.PORT || 3000,
+app.listen(process.env.PORT || 3000;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
