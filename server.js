@@ -1,10 +1,10 @@
 var express = require("express");
 
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
+var app = express();
 
-const app = express();
-
-app.use(logger("dev"));
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
 
 // Parse application body
 app.use(express.urlencoded({ extended: true }));
